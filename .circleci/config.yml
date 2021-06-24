@@ -57,11 +57,11 @@ jobs:
 
       - install_yarn
 
-      - package
-
       - install_lerna
 
       - bootstrap
+
+      - package
 
       - test
 
