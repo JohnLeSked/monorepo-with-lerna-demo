@@ -50,6 +50,8 @@ jobs:
     machine: true
 
     steps:
+      - init
+
       - install_yarn
 
       - install_lerna
