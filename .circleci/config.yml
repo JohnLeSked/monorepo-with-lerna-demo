@@ -13,19 +13,33 @@ commands:
       - checkout
       - restore_cache:
           key: yarn-cache-{{ checksum "yarn.lock" }}
-          
+  install_yarn:
+    # Install yan using these steps as NVM exists in the machine yet the circleci orb doesn't deal with that
+    steps:
+      - run: |
+          echo 'export NVM_DIR="/opt/circleci/.nvm"' >> $BASH_ENV
+          echo ' [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
+      - run: |
+          node -v
+      - run: |
+          nvm install v12
+          node -v
+          nvm alias default v12
+      - run: |
+          curl -o- -L https://yarnpkg.com/install.sh | bash
+          echo 'export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"' >> $BASH_ENV
+
   install_lerna: 
     steps:
       - run: |
-          npm install lerna
+          yarn global add lerna
   package: 
     steps:
       - run: |
-          npm install
+          yarn
   bootstrap: 
     steps:
       - run: |
-          npm install lerna
           npx lerna bootstrap
   test: 
     steps:
@@ -40,6 +54,8 @@ jobs:
 
     steps:
       - init
+
+      - install_yarn
 
       - package
 
