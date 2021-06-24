@@ -1,0 +1,13 @@
+{
+  "name": "@johnle/common",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo Test for common"
+  },
+  "keywords": [],
+  "author": "John Le <nguyenlt_dev@yahoo.com>",
+  "license": "MIT",
+  "types": "index.d.ts"
+}

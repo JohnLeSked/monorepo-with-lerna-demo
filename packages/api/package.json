@@ -1,0 +1,16 @@
+{
+  "name": "@johnle/api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Test for api\""
+  },
+  "keywords": [],
+  "author": "John Le <nguyenlt_dev@yahoo.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.17.1",
+    "@johnle/common": "1.0.0"
+  }
+}
