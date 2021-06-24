@@ -61,8 +61,6 @@ jobs:
 
       - bootstrap
 
-      - package
-
       - test
 
 
