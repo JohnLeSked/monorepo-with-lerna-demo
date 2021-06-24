@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo Test for common"
+    "test": "echo Test for common yes"
   },
   "keywords": [],
   "author": "John Le <nguyenlt_dev@yahoo.com>",
