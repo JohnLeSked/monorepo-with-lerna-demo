@@ -1,6 +1,6 @@
 {
   "name": "@johnle/api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "author": "John Le <nguyenlt_dev@yahoo.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "4.17.1",
-    "@johnle/common": "1.0.0"
+    "@johnle/common": "^1.0.1",
+    "express": "4.17.1"
   }
 }
