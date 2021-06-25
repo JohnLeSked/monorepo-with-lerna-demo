@@ -61,6 +61,8 @@ jobs:
 
       - bootstrap
 
+      - package # to install binary execution for each package that lerna bootstrap didnt do
+
       - test
 
 
